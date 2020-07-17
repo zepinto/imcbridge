@@ -26,11 +26,11 @@ task server(type: JavaExec) {
 task publish(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = 'pt.lsts.ImcBridgePublish'
-    args '7008', 'localhost', '7007'
+    args '7008', 'ripples.lsts.pt', '7007'
 }
 
 task listen(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = 'pt.lsts.ImcBridgeClient'
-    args '7008', 'localhost', '7007'
+    args '6001', 'ripples.lsts.pt', '7007'
 }

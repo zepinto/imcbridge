@@ -39,7 +39,7 @@ public class ImcBridgeCloud {
 
     private void disseminate(Message m) {
         clients.forEach(client -> {
-            client.write(m.toString());
+            client.write(m.toString()+"\r\n");
         });
     }
 
