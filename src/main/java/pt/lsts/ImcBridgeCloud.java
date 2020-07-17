@@ -44,7 +44,7 @@ public class ImcBridgeCloud {
     }
 
     public static void main(String[] args) throws Exception {
-        var udpServer = new UdpClient();
+        UdpClient udpServer = new UdpClient();
         int port = Integer.valueOf(args[0]);
         udpServer.bind(port);
         udpServer.register(new ImcBridgeCloud(port));
